@@ -4,13 +4,13 @@
  * Returns an action object for incrementing the tally counter.
  * @returns {{type: "ADD"}}
  */
-const incrementAction = () => ({ type: "ADD" });
+const addAction = () => ({ type: "ADD" });
 
 /**
  * Returns an action object for decrementing the tally counter.
  * @returns {{type: "SUBTRACT"}}
  */
-const decrementAction = () => ({ type: "SUBTRACT" });
+const subtractAction = () => ({ type: "SUBTRACT" });
 
 /**
  * Returns an action object for resetting the tally counter.
@@ -18,4 +18,4 @@ const decrementAction = () => ({ type: "SUBTRACT" });
  */
 const resetAction = () => ({ type: "RESET" });
 
-export { incrementAction, decrementAction, resetAction };
+export { addAction, subtractAction, resetAction };

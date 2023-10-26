@@ -1,8 +1,6 @@
 /**
- *
- * The state of the Tally counter
  * @typedef {object} State
- * @prop {number} tally The current value of the tally counter.
+ * @prop {number} tally - The tally value
  */
 
 /**
@@ -12,19 +10,20 @@
 const initialState = { tally: 0 };
 
 /**
- * Represents the available actions for manipulating the tally counter.
  * @typedef {object} Action
- * @prop {"ADD" | "SUBTRACT" | "RESET"} type
+ * @prop {"ADD" | "SUBTRACT" | "RESET"} type - The type of action.
  */
 
 /**
- * Takes in the current tally (`state`) of the tally counter and the type of
- * `action` to be performed on it, applies the action, and returns a new current
- * state object.
- *
- * @param {State} [state=initialState] - The current state of the tally counter. Defaults to the initial state.
+ * @callback Reducer
  * @param {Action} action - The action to be performed on the tally counter.
+ * @param {State} [state=initialState] - The current state of the tally counter. Defaults to the initial state.
  * @returns {State} The updated state after applying the action.
+ */
+
+/**
+ * Updates the tally counter state based on the provided action.
+ * @type {Reducer}
  */
 const reducer = (action, state = initialState) => {
 	switch (action.type) {
